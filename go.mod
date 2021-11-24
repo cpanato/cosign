@@ -8,7 +8,7 @@ require (
 	github.com/ThalesIgnite/crypto11 v1.2.5
 	github.com/cyberphone/json-canonicalization v0.0.0-20210823021906-dc406ceaf94b
 	github.com/go-openapi/runtime v0.21.0
-	github.com/go-openapi/strfmt v0.21.0
+	github.com/go-openapi/strfmt v0.21.1
 	github.com/go-openapi/swag v0.19.15
 	github.com/go-piv/piv-go v1.9.0
 	github.com/google/certificate-transparency-go v1.1.2-0.20210728111105-5f7e9ba4be3d
@@ -41,14 +41,6 @@ require (
 )
 
 require (
-	github.com/envoyproxy/protoc-gen-validate v0.6.2 // indirect
-	github.com/form3tech-oss/jwt-go v3.2.5+incompatible // indirect
-	github.com/mattn/go-runewidth v0.0.13 // indirect
-	github.com/onsi/gomega v1.16.0 // indirect
-	github.com/prometheus/procfs v0.7.3 // indirect
-	github.com/urfave/cli v1.22.5 // indirect
-	go.opentelemetry.io/contrib v1.1.0 // indirect
-	go.opentelemetry.io/proto/otlp v0.10.0 // indirect
 	golang.org/x/mod v0.5.1 // indirect
 	golang.org/x/time v0.0.0-20210723032227-1f47c861a9ac // indirect
 	k8s.io/klog/v2 v2.20.0 // indirect
