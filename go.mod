@@ -35,7 +35,7 @@ require (
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211
 	google.golang.org/api v0.65.0
 	k8s.io/api v0.22.5
-	k8s.io/apimachinery v0.22.5
+	k8s.io/apimachinery v0.23.1
 	k8s.io/client-go v0.22.5
 	k8s.io/utils v0.0.0-20211208161948-7d6a63dca704
 	knative.dev/pkg v0.0.0-20220114141842-0a429cba1c73
