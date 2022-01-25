@@ -34,9 +34,9 @@ require (
 	golang.org/x/oauth2 v0.0.0-20211104180415-d3ed0bb246c8
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211
 	google.golang.org/api v0.65.0
-	k8s.io/api v0.22.5
-	k8s.io/apimachinery v0.22.5
-	k8s.io/client-go v0.22.5
+	k8s.io/api v0.23.2
+	k8s.io/apimachinery v0.23.2
+	k8s.io/client-go v0.23.2
 	k8s.io/utils v0.0.0-20211208161948-7d6a63dca704
 	knative.dev/pkg v0.0.0-20220114141842-0a429cba1c73
 )
@@ -52,7 +52,6 @@ require (
 	github.com/google/go-containerregistry/pkg/authn/kubernetes v0.0.0-20220120151853-ac864e57b117 // indirect
 	golang.org/x/net v0.0.0-20220114011407-0dd24b26b47d // indirect
 	k8s.io/kube-openapi v0.0.0-20220114203427-a0453230fd26 // indirect
-	sigs.k8s.io/structured-merge-diff/v4 v4.2.1 // indirect
 )
 
 require (
