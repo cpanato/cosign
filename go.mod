@@ -37,9 +37,9 @@ require (
 	golang.org/x/oauth2 v0.0.0-20211104180415-d3ed0bb246c8
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211
 	google.golang.org/api v0.69.0
-	k8s.io/api v0.22.5
-	k8s.io/apimachinery v0.22.5
-	k8s.io/client-go v0.22.5
+	k8s.io/api v0.23.4
+	k8s.io/apimachinery v0.23.4
+	k8s.io/client-go v0.23.4
 	k8s.io/utils v0.0.0-20211208161948-7d6a63dca704
 	knative.dev/pkg v0.0.0-20220121092305-3ba5d72e310a
 	sigs.k8s.io/release-utils v0.4.1-0.20220207182343-6dadf2228617
@@ -58,5 +58,4 @@ require (
 	go.opentelemetry.io/contrib v1.3.0 // indirect
 	go.opentelemetry.io/proto/otlp v0.12.0 // indirect
 	k8s.io/kube-openapi v0.0.0-20220124234850-424119656bbf // indirect
-	sigs.k8s.io/structured-merge-diff/v4 v4.2.1 // indirect
 )
