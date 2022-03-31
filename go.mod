@@ -26,7 +26,6 @@ require (
 	github.com/hashicorp/go-secure-stdlib/parseutil v0.1.3
 	github.com/hashicorp/yamux v0.0.0-20211028200310-0bc27b27de87
 	github.com/in-toto/in-toto-golang v0.3.4-0.20211211042327-af1f9fb822bf
-	github.com/jmhodges/clock v0.0.0-20160418191101-880ee4c33548
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/letsencrypt/boulder v0.0.0-20220322173223-dd8be8d7b02c
 	github.com/manifoldco/promptui v0.9.0
