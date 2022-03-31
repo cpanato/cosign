@@ -52,7 +52,7 @@ type realConnector struct {
 }
 
 func (rf *realConnector) OIDConnect(url, clientID, secret string) (*oauthflow.OIDCIDToken, error) {
-	return oauthflow.OIDConnect(url, clientID, secret, rf.flow)
+	return oauthflow.OIDConnect(url, clientID, secret, "", rf.flow)
 }
 
 func getCertForOauthID(priv *ecdsa.PrivateKey, fc api.Client, connector oidcConnector, oidcIssuer, oidcClientID, oidcClientSecret string) (*api.CertificateResponse, error) {
