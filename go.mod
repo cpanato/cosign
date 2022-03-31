@@ -28,7 +28,7 @@ require (
 	github.com/in-toto/in-toto-golang v0.3.4-0.20211211042327-af1f9fb822bf
 	github.com/jmhodges/clock v0.0.0-20160418191101-880ee4c33548
 	github.com/kelseyhightower/envconfig v1.4.0
-	github.com/letsencrypt/boulder v0.0.0-20220328211411-dab8a71b0e2f
+	github.com/letsencrypt/boulder v0.0.0-20220322173223-dd8be8d7b02c
 	github.com/manifoldco/promptui v0.9.0
 	github.com/miekg/pkcs11 v1.1.1
 	github.com/mitchellh/go-homedir v1.1.0
@@ -242,7 +242,7 @@ require (
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
 	github.com/pelletier/go-toml v1.9.4 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/prometheus/client_golang v1.11.1 // indirect
+	github.com/prometheus/client_golang v1.12.1 // indirect
 	github.com/prometheus/client_model v0.2.0 // indirect
 	github.com/prometheus/common v0.32.1 // indirect
 	github.com/prometheus/statsd_exporter v0.21.0 // indirect
@@ -314,5 +314,6 @@ require (
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.1 // indirect
 )
 
-// replace github.com/letsencrypt/boulder v0.0.0-20220328211411-dab8a71b0e2f => github.com/cpanato/boulder v0.0.0-20220330104659-1d6951d8899d
+replace github.com/letsencrypt/boulder v0.0.0-20220322173223-dd8be8d7b02c => github.com/cpanato/boulder v0.0.0-20220331081745-acec5537255b
+
 replace github.com/sigstore/sigstore v1.2.1-0.20220328200116-ef48ee800626 => github.com/cpanato/sigstore v1.2.1-0.20220331082237-1b26261f645e
