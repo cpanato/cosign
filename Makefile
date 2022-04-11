@@ -56,7 +56,7 @@ GOLANGCI_LINT_BIN = $(GOLANGCI_LINT_DIR)/golangci-lint
 
 KO_PREFIX ?= gcr.io/projectsigstore
 export KO_DOCKER_REPO=$(KO_PREFIX)
-GHCR_PREFIX ?= ghcr.io/sigstore/cosign
+GHCR_PREFIX ?= ghcr.io/cpanato/cosign
 COSIGNED_YAML ?= cosign-$(GIT_TAG).yaml
 LATEST_TAG ?=
 
