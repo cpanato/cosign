@@ -46,6 +46,7 @@ steps:
   entrypoint: /bin/sh
   dir: "go/src/sigstore/cosign"
   env:
+  - TUF_ROOT=/tmp
   - "GOPATH=/workspace/go"
   - "GOBIN=/workspace/bin"
   - PROJECT_ID=${PROJECT_ID}
@@ -69,6 +70,7 @@ steps:
   entrypoint: 'bash'
   dir: "go/src/sigstore/cosign"
   env:
+  - TUF_ROOT=/tmp
   - "GOPATH=/workspace/go"
   - "GOBIN=/workspace/bin"
   - PROJECT_ID=${PROJECT_ID}
