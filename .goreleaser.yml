@@ -17,8 +17,8 @@ before:
 # this is needed because we are generating files that goreleaser was not aware to push to GH project release
   - /bin/bash -c 'if [ -z "$CI" ]; then make sign-release-images; fi'
 
-gomod:
-  proxy: true
+# gomod:
+#   proxy: true
 
 sboms:
 - artifacts: binary
@@ -238,7 +238,7 @@ release:
   prerelease: allow # remove this when we start publishing non-prerelease or set to auto
   draft: true # allow for manual edits
   github:
-    owner: sigstore
+    owner: cpanato
     name: cosign
   footer: |
     ### Thanks to all contributors!
