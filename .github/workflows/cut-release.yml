@@ -1,34 +1,80 @@
 name: Cut Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      release_tag:
-        required: true
-        type: string
-        description: 'Release tag'
-      key_ring:
-        required: true
-        type: string
-        description: 'Key ring for cosign key'
-      key_name:
-        required: true
-        type: string
-        description: 'Key name for cosign key'
+  push:
+    tags:
+      - "v*"
 
 concurrency: cut-release
 
+env:
+  CROSS_BUILDER_IMAGE: ghcr.io/gythialy/golang-cross:v1.19.4-0@sha256:53ee894818ac14377996a6fe7c8fe6156d018a20f82aaf69f2519fc45d897bec
+  COSIGN_IMAGE: gcr.io/projectsigstore/cosign:v1.13.1@sha256:fd5b09be23ef1027e1bdd490ce78dcc65d2b15902e1f4ba8e04f3b4019cc1057
+
 jobs:
+  check-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Signature
+        run: |
+          docker run --rm \
+          -e COSIGN_EXPERIMENTAL=true \
+          -e TUF_ROOT=/tmp \
+          $COSIGN_IMAGE \
+          verify \
+          $CROSS_BUILDER_IMAGE
+
   cut-release:
-    name: Cut release
-    uses: sigstore/sigstore/.github/workflows/reusable-release.yml@main
+    runs-on: ubuntu-latest
+    needs:
+      - check-image
+
     permissions:
       id-token: write
       contents: read
-    with:
-      release_tag: ${{ github.event.inputs.release_tag }}
-      key_ring: ${{ github.event.inputs.key_ring }}
-      key_name: ${{ github.event.inputs.key_name }}
-      workload_identity_provider: 'projects/498091336538/locations/global/workloadIdentityPools/githubactions/providers/sigstore-cosign'
-      service_account: 'github-actions-cosign@projectsigstore.iam.gserviceaccount.com'
-      repo: 'cosign'
+      packages: write
+
+    container:
+      image: ${{ env.CROSS_BUILDER_IMAGE }}
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3.2.0
+        with:
+          fetch-depth: 1
+
+      - name: Get TAG
+        run: echo "TAG=${GITHUB_REF#refs/tags/}" >> "$GITHUB_ENV"
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@ef5d53e30bbcd8d0836f4288f5e50ff3e086997d # v1.0.0
+        with:
+          workload_identity_provider: 'projects/498091336538/locations/global/workloadIdentityPools/githubactions/providers/sigstore-cosign'
+          service_account: 'github-actions-cosign@projectsigstore.iam.gserviceaccount.com'
+
+      - run: gcloud auth configure-docker --quiet
+
+      - name: Log into ghcr.io
+        uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a # v2.1.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: make release
+        env:
+          PROJECT_ID: ${{ env.GCP_PROJECT }}
+          KEY_LOCATION: global
+          KEY_RING: release-cosign
+          KEY_NAME: cosign
+          KEY_VERSION: latest
+          GIT_TAG: ${{ env.TAG }}
+          GOOGLE_SERVICE_ACCOUNT_NAME: keyless@projectsigstore.iam.gserviceaccount.com
+          COSIGN_EXPERIMENTAL: true
+          KO_PREFIX: gcr.io/${{ env.GCP_PROJECT }}
+
+      - run: make copy-signed-release-to-ghcr
+        env:
+          PROJECT_ID: ${{ env.GCP_PROJECT }}
+          GIT_TAG: ${{ env.TAG }}
+          COSIGN_EXPERIMENTAL: true
