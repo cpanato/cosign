@@ -47,7 +47,7 @@ require (
 	golang.org/x/term v0.6.0
 	google.golang.org/api v0.112.0
 	k8s.io/api v0.26.1
-	k8s.io/apimachinery v0.26.1
+	k8s.io/apimachinery v0.26.2
 	k8s.io/client-go v0.25.4
 	k8s.io/utils v0.0.0-20230115233650-391b47cb4029
 	sigs.k8s.io/release-utils v0.7.3
