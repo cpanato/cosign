@@ -29,7 +29,7 @@ require (
 	github.com/nozzle/throttler v0.0.0-20180817012639-2ea982251481
 	github.com/open-policy-agent/opa v0.52.0
 	github.com/pkg/errors v0.9.1
-	github.com/secure-systems-lab/go-securesystemslib v0.6.0
+	github.com/secure-systems-lab/go-securesystemslib v0.7.0
 	github.com/sigstore/fulcio v1.3.1
 	github.com/sigstore/rekor v1.2.2-0.20230530122220-67cc9e58bd23
 	github.com/sigstore/sigstore v1.7.1
@@ -48,10 +48,10 @@ require (
 	github.com/withfig/autocomplete-tools/integrations/cobra v1.2.1
 	github.com/xanzy/go-gitlab v0.86.0
 	go.step.sm/crypto v0.32.1
-	golang.org/x/crypto v0.10.0
+	golang.org/x/crypto v0.11.0
 	golang.org/x/oauth2 v0.9.0
 	golang.org/x/sync v0.3.0
-	golang.org/x/term v0.9.0
+	golang.org/x/term v0.10.0
 	google.golang.org/api v0.128.0
 	k8s.io/api v0.27.3
 	k8s.io/apimachinery v0.27.3
@@ -247,8 +247,8 @@ require (
 	golang.org/x/exp v0.0.0-20230321023759-10a507213a29 // indirect
 	golang.org/x/mod v0.11.0 // indirect
 	golang.org/x/net v0.11.0 // indirect
-	golang.org/x/sys v0.9.0 // indirect
-	golang.org/x/text v0.10.0 // indirect
+	golang.org/x/sys v0.10.0 // indirect
+	golang.org/x/text v0.11.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	golang.org/x/tools v0.9.3 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
