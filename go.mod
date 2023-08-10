@@ -53,8 +53,8 @@ require (
 	golang.org/x/sync v0.3.0
 	golang.org/x/term v0.11.0
 	google.golang.org/api v0.136.0
-	k8s.io/api v0.27.3
-	k8s.io/apimachinery v0.27.3
+	k8s.io/api v0.27.4
+	k8s.io/apimachinery v0.27.4
 	k8s.io/client-go v0.27.3
 	k8s.io/utils v0.0.0-20230505201702-9f6742963106
 	sigs.k8s.io/release-utils v0.7.4
