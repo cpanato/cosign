@@ -65,29 +65,29 @@ steps:
       gcloud auth configure-docker \
       && make release
 
-- name: ghcr.io/gythialy/golang-cross:v1.19.13-0@sha256:06e3605b227948431d43f4a868b68d4a771c71c728099f37856e404f2d77cf06
-  entrypoint: 'bash'
-  dir: "go/src/sigstore/cosign"
-  env:
-  - "GOPATH=/workspace/go"
-  - "GOBIN=/workspace/bin"
-  - PROJECT_ID=${PROJECT_ID}
-  - KEY_LOCATION=${_KEY_LOCATION}
-  - KEY_RING=${_KEY_RING}
-  - KEY_NAME=${_KEY_NAME}
-  - KEY_VERSION=${_KEY_VERSION}
-  - GIT_TAG=${_GIT_TAG}
-  - KO_PREFIX=gcr.io/${PROJECT_ID}
-  - COSIGN_EXPERIMENTAL=true
-  - GOOGLE_SERVICE_ACCOUNT_NAME=keyless@${PROJECT_ID}.iam.gserviceaccount.com
-  - GITHUB_USER=${_GITHUB_USER}
-  secretEnv:
-  - GITHUB_TOKEN
-  args:
-    - '-c'
-    - |
-      echo $$GITHUB_TOKEN | docker login ghcr.io -u $$GITHUB_USER --password-stdin \
-      && make copy-signed-release-to-ghcr || true
+# - name: ghcr.io/gythialy/golang-cross:v1.19.13-0@sha256:06e3605b227948431d43f4a868b68d4a771c71c728099f37856e404f2d77cf06
+#   entrypoint: 'bash'
+#   dir: "go/src/sigstore/cosign"
+#   env:
+#   - "GOPATH=/workspace/go"
+#   - "GOBIN=/workspace/bin"
+#   - PROJECT_ID=${PROJECT_ID}
+#   - KEY_LOCATION=${_KEY_LOCATION}
+#   - KEY_RING=${_KEY_RING}
+#   - KEY_NAME=${_KEY_NAME}
+#   - KEY_VERSION=${_KEY_VERSION}
+#   - GIT_TAG=${_GIT_TAG}
+#   - KO_PREFIX=gcr.io/${PROJECT_ID}
+#   - COSIGN_EXPERIMENTAL=true
+#   - GOOGLE_SERVICE_ACCOUNT_NAME=keyless@${PROJECT_ID}.iam.gserviceaccount.com
+#   - GITHUB_USER=${_GITHUB_USER}
+#   secretEnv:
+#   - GITHUB_TOKEN
+#   args:
+#     - '-c'
+#     - |
+#       echo $$GITHUB_TOKEN | docker login ghcr.io -u $$GITHUB_USER --password-stdin \
+#       && make copy-signed-release-to-ghcr || true
 
 availableSecrets:
   secretManager:
