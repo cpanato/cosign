@@ -21,7 +21,7 @@ GOBIN=$(shell go env GOBIN)
 endif
 
 # Set version variables for LDFLAGS
-PROJECT_ID ?= projectsigstore
+PROJECT_ID ?= cpanato-general
 RUNTIME_IMAGE ?= gcr.io/distroless/static
 GIT_TAG ?= dirty-tag
 GIT_VERSION ?= $(shell git describe --tags --always --dirty)
@@ -52,9 +52,9 @@ SRCS = $(shell find cmd -iname "*.go") $(shell find pkg -iname "*.go")
 GOLANGCI_LINT_DIR = $(shell pwd)/bin
 GOLANGCI_LINT_BIN = $(GOLANGCI_LINT_DIR)/golangci-lint
 
-KO_PREFIX ?= gcr.io/projectsigstore
+KO_PREFIX ?= gcr.io/cpanato-general
 export KO_DOCKER_REPO=$(KO_PREFIX)
-GHCR_PREFIX ?= ghcr.io/sigstore/cosign
+GHCR_PREFIX ?= ghcr.io/cpanato/cosign
 LATEST_TAG ?=
 
 .PHONY: all lint test clean cosign cross
