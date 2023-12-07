@@ -12,7 +12,7 @@ require (
 	github.com/depcheck-test/depcheck-test v0.0.0-20220607135614-199033aaa936
 	github.com/digitorus/timestamp v0.0.0-20230902153158-687734543647
 	github.com/go-openapi/runtime v0.26.0
-	github.com/go-openapi/strfmt v0.21.8
+	github.com/go-openapi/strfmt v0.21.9
 	github.com/go-openapi/swag v0.22.4
 	github.com/go-piv/piv-go v1.11.0
 	github.com/google/certificate-transparency-go v1.1.7
@@ -52,9 +52,9 @@ require (
 	golang.org/x/sync v0.5.0
 	golang.org/x/term v0.15.0
 	google.golang.org/api v0.153.0
-	k8s.io/api v0.28.3
-	k8s.io/apimachinery v0.28.3
-	k8s.io/client-go v0.28.3
+	k8s.io/api v0.28.4
+	k8s.io/apimachinery v0.28.4
+	k8s.io/client-go v0.28.4
 	k8s.io/utils v0.0.0-20230726121419-3b25d923346b
 	sigs.k8s.io/release-utils v0.7.7
 )
@@ -241,7 +241,7 @@ require (
 	github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415 // indirect
 	github.com/yashtewari/glob-intersection v0.2.0 // indirect
 	github.com/zeebo/errs v1.3.0 // indirect
-	go.mongodb.org/mongo-driver v1.12.1 // indirect
+	go.mongodb.org/mongo-driver v1.13.0 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/otel v1.21.0 // indirect
 	go.opentelemetry.io/otel/metric v1.21.0 // indirect
