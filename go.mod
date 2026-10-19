@@ -3,7 +3,7 @@ module github.com/sigstore/cosign/v3
 go 1.26.0
 
 require (
-	cloud.google.com/go/compute/metadata v0.9.0
+	cloud.google.com/go/compute/metadata v0.10.0
 	cuelang.org/go v0.17.0
 	github.com/ThalesIgnite/crypto11 v1.2.5
 	github.com/awslabs/amazon-ecr-credential-helper/ecr-login v0.12.0
