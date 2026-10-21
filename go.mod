@@ -6,7 +6,7 @@ require (
 	cloud.google.com/go/compute/metadata v0.10.0
 	cuelang.org/go v0.17.1
 	github.com/awslabs/amazon-ecr-credential-helper/ecr-login v0.12.0
-	github.com/buildkite/agent/v3 v3.130.0
+	github.com/buildkite/agent/v3 v3.138.1
 	github.com/chrismellard/docker-credential-acr-env v0.0.0-20230304212654-82a0ddb27589
 	github.com/cyberphone/json-canonicalization v0.0.0-20241213102144-19d51d7fe467
 	github.com/depcheck-test/depcheck-test v0.0.0-20220607135614-199033aaa936
@@ -66,7 +66,6 @@ require (
 )
 
 require (
-	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.11-20260709200747-435963d16310.1 // indirect
 	cloud.google.com/go v0.123.0 // indirect
 	cloud.google.com/go/auth v0.24.1-0.20261001053825-dbc26066f70a // indirect
 	cloud.google.com/go/auth/oauth2adapt v0.3.0 // indirect
@@ -126,7 +125,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sts v1.51.4 // indirect
 	github.com/aws/smithy-go v1.28.5 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
-	github.com/buildkite/go-pipeline v0.17.1 // indirect
+	github.com/buildkite/go-pipeline v0.18.0 // indirect
 	github.com/buildkite/interpolate v0.1.5 // indirect
 	github.com/buildkite/roko v1.4.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
