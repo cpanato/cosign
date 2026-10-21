@@ -11,7 +11,7 @@ require (
 	github.com/cyberphone/json-canonicalization v0.0.0-20241213102144-19d51d7fe467
 	github.com/depcheck-test/depcheck-test v0.0.0-20220607135614-199033aaa936
 	github.com/digitorus/timestamp v0.0.0-20231217203849-220c5c2851b7
-	github.com/dustin/go-humanize v1.0.1
+	github.com/dustin/go-humanize v1.1.0
 	github.com/eclipse-keypont/crypto11 v1.6.8
 	github.com/go-jose/go-jose/v4 v4.1.6
 	github.com/go-openapi/runtime v0.33.3
