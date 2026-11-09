@@ -150,7 +150,7 @@ jobs:
         cache: false
 
     - name: Setup mirror
-      uses: chainguard-dev/actions/setup-mirror@3403a578b543fd3f0debdaef9dd989ae54e3fcef # v1.6.41
+      uses: chainguard-dev/actions/setup-mirror@794a2c44abbbd7b3a186db97b359270e4105448f # v1.8.0
       with:
         mirror: mirror.gcr.io
 
@@ -258,4 +258,4 @@ jobs:
 
     - name: Collect diagnostics
       if: ${{ failure() }}
-      uses: chainguard-dev/actions/kind-diag@3403a578b543fd3f0debdaef9dd989ae54e3fcef # v1.6.41
+      uses: chainguard-dev/actions/kind-diag@794a2c44abbbd7b3a186db97b359270e4105448f # v1.8.0
